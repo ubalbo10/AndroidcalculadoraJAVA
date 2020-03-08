@@ -23,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
     EditText valor2;
     EditText valor3;
     TextView total;
-    TextView nousado;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,6 +46,31 @@ public class MainActivity extends AppCompatActivity {
                                                Float.parseFloat(valor2.getText().toString())+
                                                Float.parseFloat(valor3.getText().toString());
                total.setText(suma.toString());
+
+
+            }
+        });
+
+        btnrestar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Float resta=Float.parseFloat(valor1.getText().toString())-
+                        Float.parseFloat(valor2.getText().toString())-
+                        Float.parseFloat(valor3.getText().toString());
+                total.setText(resta.toString());
+
+
+            }
+        });
+
+
+        btnmultiplicar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Float resultado=Float.parseFloat(valor1.getText().toString())*
+                        Float.parseFloat(valor2.getText().toString())*
+                        Float.parseFloat(valor3.getText().toString());
+                total.setText(resultado.toString());
 
 
             }
